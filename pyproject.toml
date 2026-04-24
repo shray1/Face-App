@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "face-app"
+version = "0.1.0"
+description = "Cross-platform face recognition desktop application"
+requires-python = ">=3.10"
+dependencies = [
+    "PyQt6>=6.6.0",
+    "SQLAlchemy>=2.0.0",
+    "opencv-python>=4.8.0",
+    "Pillow>=10.0.0",
+    "scikit-learn>=1.3.0",
+    "numpy>=1.24.0",
+    "imagehash>=4.3.1",
+    "exifread>=3.0.0",
+    "tqdm>=4.65.0",
+]
+
+[project.optional-dependencies]
+# face-recognition requires dlib which needs CMake + a C++ compiler.
+# Install via:  pip install face-recognition
+# or pre-built:  pip install face-recognition-models dlib --find-links https://github.com/jloh02/dlib/releases
+face = [
+    "face-recognition>=1.3.0",
+    "deepface>=0.0.79",
+]
+dev = [
+    "pyinstaller>=6.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["face_app*"]

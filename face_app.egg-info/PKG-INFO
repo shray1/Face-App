@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: face-app
+Version: 0.1.0
+Summary: Cross-platform face recognition desktop application
+Requires-Python: >=3.10
+Requires-Dist: PyQt6>=6.6.0
+Requires-Dist: SQLAlchemy>=2.0.0
+Requires-Dist: opencv-python>=4.8.0
+Requires-Dist: Pillow>=10.0.0
+Requires-Dist: scikit-learn>=1.3.0
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: imagehash>=4.3.1
+Requires-Dist: exifread>=3.0.0
+Requires-Dist: tqdm>=4.65.0
+Provides-Extra: face
+Requires-Dist: face-recognition>=1.3.0; extra == "face"
+Requires-Dist: deepface>=0.0.79; extra == "face"
+Provides-Extra: dev
+Requires-Dist: pyinstaller>=6.0.0; extra == "dev"
